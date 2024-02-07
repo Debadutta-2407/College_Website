@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang=“en”>
+<head>
+    <title>Admission</title>
+    <meta charset=“utf-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1”>
+    <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css”>
+ 
+    <script src=“https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js”></script>
+    <script src=“https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js”></script>
+ 
+    <script src=“https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js”></script>
+
+    <!-- Style -->
+
+    <style>
+        #home{
+            background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("banner.jpg");
+            width: 100%;
+            height: 75vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding-top: 40px;
+        }
+        #home h1{
+            color: #fff;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            padding-left: 20px;
+        }
+
+        #home p{
+            width: 50%;
+            color: #fff;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            padding-left: 20px;
+            padding-top: 240px;
+        }
+
+        #content {
+            padding: 3vw 8vw 0vw 8vw;
+            text-align: center;
+            background: lightblue;
+        }
+
+        #content h3 {      
+            font-size: 50px;
+            position: relative;
+            background-color: rgb(4, 255, 247);
+            left: 15px;
+            margin-bottom: 0%;
+        }
+
+        #content .wrapper{
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        #content .container {
+            height: 400px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: start;
+        }
+
+        #content .card {
+            width: 80px;
+            border-radius: .75rem;
+            background-size: cover;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 2rem;
+            margin: 0 10px;
+            display: flex;
+            align-items: flex-end;
+            transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+            box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+        }
+
+        #content .card > .row {
+            color: #fff;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #content .card > .row > .icon {
+            background: #223;
+            color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+        }
+
+        #content .card > .row > .description {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            height: 80px;
+            width: 520px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition-delay: .3s;
+            transition: all .3s ease;
+        }
+
+        #content .description h2 {
+            text-transform: uppercase;
+        }
+
+        #content input {
+            display: none;
+        }
+
+        #content input:checked + label {
+            width: 600px;
+        }
+
+        #content input:checked + label .description {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        #content .card[for=c1] {
+            background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url(Add1.jpg);
+        }
+        #content .card[for=c2] {
+            background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url(Add2.jpg);
+        }
+        #content .card[for=c3] {
+            background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url(Add3.jpg);
+        }
+        #content .card[for=c4] {
+            background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url(Add4.jpg);
+        }
+
+        #update {
+            padding: 0vw 4vw 6vw 8vw;
+            text-align: center;
+           
+        }
+
+        #update .heading {
+            font-size: 50px;
+            text-transform: uppercase; 
+            text-decoration: underline; 
+                
+        }
+
+        #update .news {
+            display: flex;
+            font-size: 1.2rem;
+            
+        }
+
+        #update span {
+            position: relative;
+            top: 100px;
+            right: 160px;
+            width: 300px;
+        }
+
+        footer {
+            padding: 8vw;
+            background-color: #101c32;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        footer .footer-col{
+            padding-bottom: 40px;
+        }
+        footer{
+            color: rgb(241, 240, 245);
+            font-weight: 600;
+            padding-bottom: 20px;
+            
+        }
+        
+        
+
+    </style>
+ 
+</head>
+<body>
+<div class=“container-fluid”>
+    
+    <!-- Home -->
+
+    <section id="home">
+        <h1>Admission | SOA</h1>
+        <p>Strive | Observe | Adapt</p>
+    </section>
+
+    <!-- Content -->
+    
+    <section id="content">
+        <h3>Empowering Students For A Brighter Future.</h3>
+        <div class="wrapper">
+            <div class="container">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h2>What to Study</h2>
+                        </div>
+                    </div>
+                </label>
+
+                <input type="radio" name="slide" id="c2" >
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h2>How to Apply</h2>
+                        </div>
+                    </div>
+                </label>
+
+                <input type="radio" name="slide" id="c3" >
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h2>Free Structure</h2>
+                        </div>
+                    </div>
+                </label>
+
+                <input type="radio" name="slide" id="c4" >
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h2>Eligibility Criteria</h2>
+                        </div>
+                    </div>
+                </label>
+                
+
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- Updates -->
+
+    <section id="update">
+        <div class="heading">
+            <h4>Admission News And Updates</h4>
+        </div>
+        <div class="news">
+            <p>SAAT 2023 Veterinary Science (Final Round) Result Declared</p>
+            <span>10-Oct-2023</span>
+            <p>Orientation Program of Biotechnology Courses</p>
+            <span>02-Oct-2023</span>
+            <p>Orientation Program of M.Sc (General Science) Program</p>
+            <span>08-Oct-2023</span>
+            <p>SAAT 2023 Veterinary Science (Final Round) Examination Date</p>
+            <span>02-Oct-2023</span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-col">
+            <span>SIKSHA O ANUSANDHAN</span>
+            <address>
+                J-15 KHANDAGIRI,<br>
+                BHUBANESWAR, ODISHA - 751030,<br>
+                INDIA <br>     
+            </address>
+            <span>SAAT2023@SOA.AC.IN</span>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html> 
